@@ -23,10 +23,6 @@ body{
     background-color: var(--Background-LM);
 }
 
-html.zaahxu.idc0_350{
-    width: max-content;
-}
-
 /* 
 :root {
     /* Light Mode 
@@ -734,6 +730,10 @@ a.footer-container-a:hover{
         padding-right: 15px;
     }
 
+    html.zaahxu.idc0_350{
+    width: max-content;
+    }
+    
     Header{
         width: 768px;
         min-height: 68px;
@@ -1124,6 +1124,10 @@ a.footer-container-a:hover{
         max-width: 480px;
     }
 
+    html.zaahxu.idc0_350{
+    width: max-content;
+    }
+    
     #container, Header, #main-info-div, .row1, .row2, #navbar-menu, #main-container {
         width: 100%;
         margin-left: auto;
