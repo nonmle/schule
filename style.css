@@ -22,6 +22,11 @@ body{
     color: var(--Text-LM);
     background-color: var(--Background-LM);
 }
+
+html.zaahxu.idc0_350{
+    width: max-content;
+}
+
 /* 
 :root {
     /* Light Mode 
