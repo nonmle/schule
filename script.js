@@ -8,8 +8,8 @@
       console.log(user)
 
     // Console Messeage
-    console.log('%cERROR', errorStyles);
     const errorStyles = 'background-color: #b10000; color: #ffd8d8; font-size: 100px; padding: 10px; font-Weight: 900; font-family: noto Sans, Helvetica, sans-serif;';
+    console.log('%cERROR', errorStyles);
 
     // Stop Click
     document.addEventListener('contextmenu', e => e.preventDefault());
