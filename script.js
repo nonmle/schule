@@ -1,3 +1,4 @@
+    // Contact
     let user = {
         name: 'nonmle',
         contact: {
@@ -5,15 +6,18 @@
         }
       }
       console.log(user)
-   
 
-
-
+    // Console Messeage
+    console.log('%cERROR', errorStyles);
     const errorStyles = 'background-color: #b10000; color: #ffd8d8; font-size: 100px; padding: 10px; font-Weight: 900; font-family: noto Sans, Helvetica, sans-serif;';
 
-    console.log('%cERROR', errorStyles);
+    // Stop Click
+    document.addEventListener('contextmenu', e => e.preventDefault());
 
+    const elements = document.querySelectorAll('.disable-left-click');
+    elements.forEach(element => element.addEventListener('click', e => e.preventDefault()));
   
+    // Switch Tabs Messeage
     function titleModified() {
         window.alert("Title modifed");
     }
@@ -44,8 +48,8 @@
     });
 
 
-
-   //https://stackoverflow.com/questions/28576636/mouse-click-and-drag-instead-of-horizontal-scroll-bar-to-view-full-content-of-c
+    // Drag Mouse
+    //https://stackoverflow.com/questions/28576636/mouse-click-and-drag-instead-of-horizontal-scroll-bar-to-view-full-content-of-c
     document.addEventListener("DOMContentLoaded", function() {
         let mouseDown = false;
         let startX, scrollLeft;
@@ -75,6 +79,7 @@
         slider.addEventListener('mouseleave', stopDragging, false);
     });
 
+    // Toggle Menu
     document.addEventListener("DOMContentLoaded", function() {
         document.getElementById('mobile-menu-icon-open').addEventListener('click', toggleMobileMenu);
         document.getElementById('mobile-menu-icon-close').addEventListener('click', toggleMobileMenu);
