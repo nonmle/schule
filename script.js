@@ -102,3 +102,35 @@
             }
         }
     });
+
+// Test
+
+        if (window.location.pathname.endsWith('.html')) {
+            var newPath = window.location.pathname.replace('.html', '');
+            history.replaceState(null, '', newPath);
+        }
+
+        document.addEventListener('click', function(event) {
+            var target = event.target;
+
+            if (target.tagName === 'A' && target.getAttribute('href').endsWith('.html')) {
+                event.preventDefault();
+
+                var newHref = target.getAttribute('href').replace('.html', '');
+
+                history.pushState(null, '', newHref);
+
+                loadContent(newHref);
+            }
+        });
+
+        function loadContent(filename) {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', filename + '.html', true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    document.getElementById('content').innerHTML = xhr.responseText;
+                }
+            };
+            xhr.send();
+        }
